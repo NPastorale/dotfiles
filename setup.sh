@@ -94,6 +94,15 @@ fi
 stow --no-folding -v -d "$scriptDir" paru
 errorCodes+=$?
 
+# If wallpaper file exists, delete it and stow the custom one
+if [[ -f ~/Pictures/alps4K.png ]] && ! [[ -L ~/Pictures/alps4K.png ]]; then
+    echo "wallpaper already exists. Removing..."
+    rm -rf ~/Pictures/alps4K.png
+fi
+
+stow --no-folding -v -d "$scriptDir" wallpaper
+errorCodes+=$?
+
 # Check for errors
 if [[ "$errorCodes" -eq 0 ]]; then
     echo "Everything was executed correctly."
