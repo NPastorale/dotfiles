@@ -31,6 +31,5 @@ bspc config external_rules_command ~/.dotfiles/bspwm/.config/bspwm/external_rule
 
 light-locker --lock-on-suspend &
 sxhkd &
-dropbox &
 imwheel -k
 bluetoothctl power on && sleep 2 && bluetoothctl --timeout 5 connect 78:2B:64:13:DC:47
