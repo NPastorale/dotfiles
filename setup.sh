@@ -103,6 +103,15 @@ fi
 stow --no-folding -v -d "$scriptDir" wallpaper
 errorCodes+=$?
 
+# If chrome config file exists, delete it and stow the custom one
+if [[ -f ~/.config/chrome-flags.conf ]] && ! [[ -L ~/.config/chrome-flags.conf ]]; then
+    echo "chrome config already exists. Removing..."
+    rm -rf ~/.config/chrome-flags.conf
+fi
+
+stow --no-folding -v -d "$scriptDir" chrome
+errorCodes+=$?
+
 # Check for errors
 if [[ "$errorCodes" -eq 0 ]]; then
     echo "Everything was executed correctly."
