@@ -25,6 +25,7 @@
     nord15:     #B48EAD;
     background:                  @nord1;
     foreground:                  @nord6;
+    text-color:                  @foreground;
     selected-normal-foreground:  @nord6;
     normal-foreground:           @foreground;
     alternate-normal-background: @nord1;
