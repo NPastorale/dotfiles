@@ -55,7 +55,7 @@ font-5 = SF Mono:style=Regular:size=10;2
 ;	     MODULES LAYOUT
 ;---------------------------------------
 
-modules-left = xkeyboard bspwm
+modules-left = bspwm
 modules-center = xwindow
 modules-right = updates cpu memory pulseaudio battery network bluetooth date
 
@@ -231,7 +231,7 @@ label = %percentage_used%%
 [module/network]
 type = internal/network
 
-interface = wlp0s20f3
+interface = wlan0
 
 interval = 1
 

@@ -2,57 +2,62 @@
 
 * {
     font: "SF Pro Display Light 15";
-    selected-normal-foreground: @nord7;
     transparency: "real";
     transparent: #00000000;
+    background-color: @transparent;
 }
 
-#window {
+window {
     padding: 47%;
     width: 100%;
     background-color: #00000060;
 }
 
-#inputbar {
+inputbar {
     enabled: false;
 }
 
-#listview {
+listview {
     padding: 0;
     background-color: @transparent;
 }
 
-#mainbox {
+mainbox {
     border: 0;
     padding: 0;
     background-color: @transparent;
 }
 
-#message {
+message {
     enabled: false;
 }
 
-#textbox {
+textbox {
     enabled: false;
 }
 
-#element {
+element {
     border: 0;
     background-color: @transparent;
 }
 
-#element.normal.normal {
+element.normal.normal {
     background-color: @transparent;
 }
 
-#element.normal.active {
+element.normal.active {
     background-color: @transparent;
 }
 
-#element.alternate.normal {
+element.alternate.normal {
     background-color: @transparent;
 }
 
-#element.selected.normal {
+element.selected {
     background-color: @transparent;
+}
+
+element-text.selected{
+    text-color: @nord7;
+
 }

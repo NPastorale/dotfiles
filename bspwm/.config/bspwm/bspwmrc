@@ -4,7 +4,7 @@ picom -b --experimental-backends
 feh --bg-fill /home/nahue/Pictures/alps4K.png
 xsetroot -cursor_name left_ptr
 killall polybar ; polybar -r nord &
-setxkbmap us
+setxkbmap -model pc104 -layout us -variant intl
 xcape -t 250 -e 'Super_L=Super_L|Shift_R|Meta_L|space'
 
 bspc monitor -d I II III IV V VI VII VIII IX X
@@ -29,7 +29,8 @@ bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc config external_rules_command ~/.dotfiles/bspwm/.config/bspwm/external_rules.sh
 
+
+eval $(keychain --eval --quiet --noask --nogui)
 light-locker --lock-on-suspend &
 sxhkd &
-imwheel -k -f
 bluetoothctl power on && sleep 2 && bluetoothctl --timeout 5 connect 78:2B:64:13:DC:47
