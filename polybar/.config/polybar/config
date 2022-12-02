@@ -26,11 +26,13 @@ nord15 = #B48EAD
 
 [bar/nord]
 width = 90%
-height = 20
+height = 2%
 bottom = false
 
+dpi = 196
+
 offset-x = 5%
-offset-y = 10
+offset-y = 0.5%
 
 border-size = 0
 border-color = ${colors.nord3}
